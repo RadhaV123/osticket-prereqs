@@ -29,7 +29,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="rg-osticket.jpg"/>
 </p>
 <p>
 Step 1. Create a Resource Group in Azure
@@ -37,7 +37,7 @@ Step 1. Create a Resource Group in Azure
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="VM-2.jpg"/>
 </p>
 <p>
 Step 2. Create a Windows 10 pro Virtual Machine (VM) with 2-4 Virtual CPUs
@@ -52,22 +52,17 @@ Step 2. Create a Windows 10 pro Virtual Machine (VM) with 2-4 Virtual CPUs
 <br />
 
 <p>
-<img src="![img1](https://github.com/RadhaV123/osticket-prereqs/assets/171521525/56eba84c-d072-4826-8a0a-0cce27fcc456)
-"/>
-</p>
+<img src="vm-3.jpg"/> </p>
 <p>
 Step 3. Open Microsoft Remote Desktop (If on Mac Desktop)
 
 - Click Add PC and enter your VMs public IP (Wait until the VM finishes deploying)
 - Enter the username and password you put in for your VM
 
+<p>
+<img src="vm-4.jpg"/>
 </p>
 
-<p>
-<img src="![jpeg](https://github.com/RadhaV123/osticker-prereqs-/assets/171521525/3ff80161-f3db-4f6a-bd53-ef341eb76cb1)
-"/>
-</p>
-<p>
 Step 4: Install/Enable IIS in Windows with CGI and Common HTTP features
 
 - Right click on the "start" icon, Click run, and enter "control"
@@ -76,14 +71,10 @@ Step 4: Install/Enable IIS in Windows with CGI and Common HTTP features
 - Internet Information Services -> Web Management Tools -> IIS Management Console [X] IIS Management Console
 - Click Ok
 
-
+<p>
+<img src="vm-5.jpg"/>
 </p>
 
-<p>
-<img src=![image](https://github.com/RadhaV123/osticker-prereqs-/assets/171521525/11de8e4a-85bd-47a5-9aa5-b39669cc6298)
-"/>
-</p>
-<p>
 Step 5. Open the Installation files page here: (https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6)
 
 - Download and isntall PHP Manager for IIS
@@ -93,12 +84,18 @@ Step 5. Open the Installation files page here: (https://drive.google.com/drive/u
 - Download and install MySQL 5.5.62 When MySQL downloads: Typical setup -> Launch Configuration Wizard(after install) -> Standard Configuration -> Password1 -> Execute
   
 Note: if you dont see anything happen immediately after clicking download, give it a few seconds.
+
+<p>
+<img src="vm-6.jpg"/>
+</p>
+<p>
+When PHP 7.3.8 is finished downloading, Create a folder "PHP" on Windows (C:). right click the PHP 7.3.8 file -> extract all -> browse -> This PC -> Windows (C:) -> PHP -> Select Folder -> Extract
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-7.jpg"/>
 </p>
-<p>
+
 Step 6. Open IIS as an Admin
 
 - On the search bar type IIS -> right click on IIS and click "run as administrator"
@@ -108,7 +105,7 @@ Step 6. Open IIS as an Admin
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-8.jpg"/>
 </p>
 <p>
 Step 7. Download and Install osTicket v1.15.8
@@ -117,13 +114,11 @@ Step 7. Download and Install osTicket v1.15.8
 - Once inside the folder, open another file explorer and go to This PC -> Windows (C:) -> inetpub -> wwwroot
 - On the wwwroot folder, drag the "upload" folder to the "wwwroot" folder
 - Rename the "upload" folder to "osTicket
-  
-</p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-9.jpg"/>
 </p>
-<p>
+
 Step 8. Go back to IIS Manager
 
 - Click restart
@@ -135,7 +130,7 @@ Note: if you dont see this and instead an error page, something was done wrong.
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-10.jpg"/>
 </p>
 <p>
 Step 9. Some extensions are not enabled.
@@ -143,11 +138,11 @@ Step 9. Some extensions are not enabled.
 - Go back to IIS -> sites -> Default -> osTicket
 - Double click PHP Manager
 - Click "Enable or Disable an extension" Enable: php_imap.dll Enable: php_intl.dll Enable: php_opcache.dll
-</p>
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-12.jpg"/>
 </p>
-<p>
+
 Step 10. Rename: ost-config.php
 
 - Go to the wwwroot folder
@@ -157,7 +152,7 @@ Step 10. Rename: ost-config.php
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-13.jpg"/>
 </p>
 <p>
 Step 11. Download and Install HeidiSQL
@@ -166,14 +161,11 @@ Step 11. Download and Install HeidiSQL
 - Create a new session, root/Password1
 - Connect to the session
 - Create a database called "osTicket"
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="vm-14.jpg"/>
 </p>
-<p>
+
 Step 11. Continue Setting up Osticket in the browser
 
 - Name HelpDesk
@@ -183,7 +175,9 @@ Step 11. Continue Setting up Osticket in the browser
 - MySQL Password: Password1
 - Click "Install Now!"
 
-  
+<p>
+<img src="vm-15.jpg"/>
+</p>
 
 "Congratulations"
 
